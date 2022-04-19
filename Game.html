@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<title>Document</title>
+
+</head>
+<body>
+	<section>
+		<h1>Math Addition Quiz Game :</h1>
+		<div class="centerdiv">
+			<div class="insertBox">
+				<div class="box1">
+					<input type="text" id="v1">
+					
+				</div>
+				<div class="box1">
+				<p>+</p>
+					
+				</div>
+				<div class="box1">
+					<input type="text" id="v2">
+					
+				</div>
+				
+			</div>
+			<div class="middleBox">
+				<input type="text" id="ans">
+
+				
+			</div>
+			<div class="sentbox">
+				<button onclick="jemsGame()">check answer</button>
+				
+			</div>
+			
+		</div>
+	</section>
+	<script type="text/javascript">
+		let n1 = Math.floor(Math.random()*10+1);
+		let n2 = Math.floor(Math.random()*10+1);
+
+		document.getElementById('v1').value = n1;
+		document.getElementById('v2').value = n2;
+		 let ans = n1 + n2;
+		 // console.log(ans);
+		  const jemsGame = ()=>{
+		  	var user = document.getElementById('ans').value;
+
+		  	if(user == ans){
+		  		alert('Wel Done! Your Answer Is Correct.')
+
+		  	}else{
+		  		alert("Correct Answer Is " + ans + ".Try Again ")
+		  	}
+		  	 document.getElementById('ans').value="";
+		  	 n1 = Math.floor(Math.random()*10+1);
+		     n2 = Math.floor(Math.random()*10+1);
+
+		document.getElementById('v1').value = n1;
+		document.getElementById('v2').value = n2;
+		 ans = n1 + n2;
+		  }
+
+	</script>
+</body>
+</html>
